@@ -2,10 +2,10 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="border-t border-slate-200 bg-white py-10">
+    <footer className="border-t border-slate-200 bg-white py-12 sm:py-14">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-4 sm:flex-row sm:px-6">
         <p className="text-sm text-slate-500">
-          © {new Date().getFullYear()} Coach High-Ticket. Todos los derechos
+          © {new Date().getFullYear()} Coach B2B High-Ticket. Todos los derechos
           reservados.
         </p>
         <nav aria-label="Enlaces legales">
