@@ -32,7 +32,7 @@ export function Hero() {
         <figure className="relative mt-10 lg:mt-0">
           <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 shadow-lg ring-1 ring-slate-900/5">
             <Image
-              src="/hero-coach.svg"
+              src="/hero-coach.avif"
               alt="Coach en sesión de estrategia comercial — sustituye por tu foto o vídeo"
               width={640}
               height={480}
