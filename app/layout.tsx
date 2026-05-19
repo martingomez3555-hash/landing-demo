@@ -14,19 +14,19 @@ const plusJakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://example.com"),
   title: {
-    default: "Coach High-Ticket | Ventas y negocio",
-    template: "%s | Coach High-Ticket",
+    default: "Coach B2B · Escalamiento High-Ticket",
+    template: "%s | Coach B2B High-Ticket",
   },
   description:
-    "Acompañamiento para cerrar ventas B2B de alto valor con proceso claro, métricas y confianza.",
+    "Mentoría y acompañamiento estratégico para escalar tu negocio high-ticket con oferta premium, proceso comercial sólido y crecimiento con claridad.",
   robots: { index: true, follow: true },
   openGraph: {
     type: "website",
     locale: "es_ES",
-    siteName: "Coach High-Ticket",
-    title: "Escala ventas high-ticket con claridad",
+    siteName: "Coach B2B High-Ticket",
+    title: "Escala tu negocio high-ticket con claridad",
     description:
-      "Diagnóstico, plan y acompañamiento para vender consultorías y servicios premium.",
+      "Oferta premium, proceso comercial y estrategia de crecimiento para coaches, agencias y expertos B2B.",
   },
 };
 
@@ -43,7 +43,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={plusJakarta.variable}>
-      <body className="min-h-dvh bg-slate-50 font-sans text-slate-900 antialiased">
+      <body className="min-h-dvh font-sans text-slate-900 antialiased">
         <SkipLink />
         {/* Google Analytics 4 — reemplaza G-XXXXXXXXXX por tu ID de medición */}
         <Script
