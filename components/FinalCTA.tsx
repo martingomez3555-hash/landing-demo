@@ -1,35 +1,35 @@
-import { FadeIn } from "@/components/FadeIn";
+import { ContactForm } from "@/components/ContactForm";
 import { PrimaryCTA } from "@/components/PrimaryCTA";
 
 export function FinalCTA() {
   return (
     <section
-      id="cta-final"
-      className="scroll-mt-20 bg-slate-900 py-20 sm:py-28"
+      id="contacto"
+      className="scroll-mt-24 border-t border-white/5 bg-surface-alt py-16 sm:py-24"
       aria-labelledby="cta-final-heading"
     >
       <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
-        <FadeIn>
-          <h2
-            id="cta-final-heading"
-            className="text-2xl font-semibold leading-snug tracking-tight text-white sm:text-3xl"
-          >
-            El crecimiento sostenible no viene de trabajar más.
-            <span className="mt-3 block font-normal text-slate-300">
-              Viene de construir un negocio más claro, sólido y mejor posicionado.
-            </span>
-          </h2>
-          <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-slate-400 sm:text-lg">
-            Agenda una llamada estratégica y revisemos qué está frenando el
-            siguiente nivel de crecimiento de tu negocio.
-          </p>
-          <div className="mt-10 flex justify-center">
-            <PrimaryCTA
-              className="min-w-[min(100%,300px)] px-8"
-              ariaLabel="Agendar llamada estratégica — sección final"
-            />
-          </div>
-        </FadeIn>
+        <h2
+          id="cta-final-heading"
+          className="text-2xl font-semibold leading-snug tracking-tight text-ink sm:text-3xl"
+        >
+          Haz que tu tráfico deje de perderse y empiece a convertir.
+        </h2>
+        <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-ink-muted sm:text-lg">
+          Te ayudo a construir una landing estratégica enfocada en resultados
+          reales y crecimiento sostenible.
+        </p>
+        <div className="mt-8 flex justify-center">
+          <PrimaryCTA
+            className="min-w-[min(100%,300px)] px-8"
+            ariaLabel="Solicitar mi landing — sección final"
+          />
+        </div>
+        <p className="mt-6 text-sm text-ink-muted/90">
+          Sin procesos complicados. Sin funnels gigantes. Solo una estructura
+          clara enfocada en convertir mejor.
+        </p>
+        <ContactForm />
       </div>
     </section>
   );

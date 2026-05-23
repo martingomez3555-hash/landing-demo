@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --color-cta: #2563eb;
-  --color-cta-hover: #1d4ed8;
+  --color-cta: #3b82f6;
+  --color-cta-hover: #2563eb;
+  --color-accent-gold: #d4a857;
 }
 
 html {
@@ -18,7 +19,7 @@ html {
 }
 
 body {
-  @apply bg-white text-slate-900 antialiased;
+  @apply bg-surface font-sans text-ink antialiased;
 }
 
 :focus-visible {
@@ -27,4 +28,16 @@ body {
 
 details summary::-webkit-details-marker {
   display: none;
+}
+
+.legal-prose a {
+  @apply text-accent-sky underline-offset-2 transition-colors hover:underline;
+}
+
+.legal-prose ul {
+  @apply list-disc space-y-2 pl-5;
+}
+
+.legal-prose strong {
+  @apply font-medium text-ink;
 }

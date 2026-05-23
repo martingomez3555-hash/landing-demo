@@ -1,66 +1,45 @@
-import { FadeIn } from "@/components/FadeIn";
 import { Section } from "@/components/Section";
 import { SectionHeading } from "@/components/SectionHeading";
 
-const rootCauses = [
-  "mensajes confusos",
-  "ofertas débiles",
-  "procesos comerciales improvisados",
-  "posicionamiento poco claro",
-  "dependencia constante del seguimiento manual",
-] as const;
-
-const symptoms = [
-  "Prospectos interesados que desaparecen.",
-  "Llamadas que no avanzan.",
-  "Clientes que solo preguntan precio.",
-  "Meses buenos seguidos de meses inestables.",
-  "Mucho esfuerzo para cerrar pocos contratos.",
+const painPoints = [
+  "Visitas que no se convierten en mensajes.",
+  "Landing pages bonitas pero confusas.",
+  "CTA débiles o mal ubicados.",
+  "Leads que se enfrían antes de avanzar.",
+  "Tráfico desperdiciado.",
+  "Falta de estructura para convertir mejor.",
 ] as const;
 
 export function Problem() {
   return (
     <Section
-      className="bg-white py-20 sm:py-28"
+      className="bg-surface-alt py-16 sm:py-24"
       labelledBy="problem-heading"
       narrow
     >
-      <FadeIn>
-        <SectionHeading
-          id="problem-heading"
-          title="Muchos negocios generan interés. Muy pocos logran convertirlo de forma consistente."
-        />
-        <p className="mt-8 text-base leading-relaxed text-slate-600">
-          El problema normalmente no es la falta de talento.
-        </p>
-        <p className="mt-6 text-sm font-medium uppercase tracking-wider text-slate-500">
-          Es:
-        </p>
-        <ul className="mt-4 space-y-3">
-          {rootCauses.map((item) => (
-            <li
-              key={item}
-              className="text-base leading-relaxed text-slate-700"
-            >
-              {item}
-            </li>
-          ))}
-        </ul>
-        <ul className="mt-14 space-y-5 border-t border-slate-200 pt-14">
-          {symptoms.map((item) => (
-            <li
-              key={item}
-              className="flex gap-4 text-base leading-relaxed text-slate-800"
-            >
-              <span
-                className="mt-2.5 h-px w-6 shrink-0 bg-slate-300"
-                aria-hidden
-              />
-              {item}
-            </li>
-          ))}
-        </ul>
-      </FadeIn>
+      <SectionHeading
+        id="problem-heading"
+        title="No necesitas más tráfico si tu página no guía a la acción correcta."
+      />
+      <p className="mt-6 text-base leading-relaxed text-ink-muted sm:text-lg">
+        Muchos negocios ya reciben visitas, mensajes o leads… pero pierden
+        oportunidades porque su página no genera claridad, confianza ni
+        seguimiento.
+      </p>
+      <ul className="mt-10 space-y-4">
+        {painPoints.map((item) => (
+          <li
+            key={item}
+            className="flex gap-3 text-base leading-relaxed text-ink-muted"
+          >
+            <span
+              className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent-sky/80"
+              aria-hidden
+            />
+            {item}
+          </li>
+        ))}
+      </ul>
     </Section>
   );
 }

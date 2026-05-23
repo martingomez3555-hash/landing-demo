@@ -1,52 +1,50 @@
-import { FadeIn } from "@/components/FadeIn";
 import { Section } from "@/components/Section";
 import { SectionHeading } from "@/components/SectionHeading";
 
 const steps = [
   {
-    title: "Diagnóstico estratégico",
-    body: "Analizamos tu oferta, posicionamiento y proceso comercial actual para detectar qué está frenando el crecimiento.",
+    title: "Entendemos tu oferta y objetivo",
+    body: "Analizamos qué vendes, cómo conviertes y qué está frenando resultados.",
   },
   {
-    title: "Reestructuración",
-    body: "Definimos una propuesta más clara, un mejor recorrido comercial y una estrategia de comunicación alineada al tipo de cliente que quieres atraer.",
+    title: "Definimos la mejor ruta de conversión",
+    body: "Estructuramos la landing enfocándonos en claridad, acción y conversión.",
   },
   {
-    title: "Escalamiento",
-    body: "Implementas un sistema comercial más sólido, estable y preparado para crecer con mayor claridad.",
+    title: "Diseñamos, construimos y lanzamos",
+    body: "Creamos una landing moderna, responsive y lista para captar mejores leads.",
   },
 ] as const;
 
 export function HowItWorks() {
   return (
     <Section
-      className="border-t border-slate-200/80 bg-slate-50 py-20 sm:py-28"
+      id="como-funciona"
+      className="scroll-mt-24 bg-surface py-16 sm:py-24"
       labelledBy="how-heading"
     >
-      <FadeIn>
-        <SectionHeading
-          id="how-heading"
-          title="Cómo funciona"
-          subtitle="Un proceso simple enfocado en claridad, posicionamiento y crecimiento."
-        />
-        <ol className="mt-14 grid gap-12 lg:grid-cols-3 lg:gap-10">
-          {steps.map((step, index) => (
-            <li key={step.title}>
-              <article>
-                <p className="text-xs font-medium uppercase tracking-[0.2em] text-slate-400">
-                  Paso {index + 1}
-                </p>
-                <h3 className="mt-4 text-lg font-semibold text-slate-900">
-                  {step.title}
-                </h3>
-                <p className="mt-3 text-base leading-relaxed text-slate-600">
-                  {step.body}
-                </p>
-              </article>
-            </li>
-          ))}
-        </ol>
-      </FadeIn>
+      <SectionHeading
+        id="how-heading"
+        title="Cómo funciona"
+        subtitle="Un proceso simple enfocado en claridad y conversión."
+      />
+      <ol className="mt-12 grid gap-8 lg:grid-cols-3 lg:gap-10">
+        {steps.map((step, index) => (
+          <li key={step.title}>
+            <article className="h-full rounded-xl border border-white/8 bg-surface-alt p-6 sm:p-8">
+              <p className="text-xs font-medium uppercase tracking-[0.2em] text-accent-gold">
+                {index + 1}
+              </p>
+              <h3 className="mt-4 text-lg font-semibold text-ink">
+                {step.title}
+              </h3>
+              <p className="mt-3 text-base leading-relaxed text-ink-muted">
+                {step.body}
+              </p>
+            </article>
+          </li>
+        ))}
+      </ol>
     </Section>
   );
 }

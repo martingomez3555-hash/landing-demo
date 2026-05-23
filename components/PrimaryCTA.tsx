@@ -1,9 +1,9 @@
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { CTA_HREF, CTA_LABEL } from "@/lib/cta";
 
 type PrimaryCTAProps = {
   className?: string;
-  /** Contexto para lectores de pantalla cuando el texto visible es genérico */
   ariaLabel?: string;
 };
 
@@ -18,6 +18,25 @@ export function PrimaryCTA({ className, ariaLabel }: PrimaryCTAProps) {
       aria-label={ariaLabel ?? CTA_LABEL}
     >
       {CTA_LABEL}
+    </Link>
+  );
+}
+
+export function SecondaryCTA({
+  href,
+  children,
+  className,
+}: {
+  href: string;
+  children: ReactNode;
+  className?: string;
+}) {
+  const base =
+    "inline-flex min-h-[48px] items-center justify-center rounded-lg border border-white/15 bg-transparent px-6 py-3 text-center text-base font-medium text-ink transition-colors hover:border-white/25 hover:bg-white/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cta";
+
+  return (
+    <Link href={href} className={className ? `${base} ${className}` : base}>
+      {children}
     </Link>
   );
 }

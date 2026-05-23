@@ -1,10 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
-import Script from "next/script";
+import { Inter } from "next/font/google";
+import { CookieBanner } from "@/components/CookieBanner";
 import { SkipLink } from "@/components/SkipLink";
+import { TrackingScripts } from "@/components/TrackingScripts";
 import "./globals.css";
+import { MetaPixel } from "@/components/MetaPixel";
 
-const plusJakarta = Plus_Jakarta_Sans({
+const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-sans",
@@ -14,24 +16,30 @@ const plusJakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://example.com"),
   title: {
-    default: "Coach B2B · Escalamiento High-Ticket",
-    template: "%s | Coach B2B High-Ticket",
+    default:
+      "Landing pages estratégicas · Convierte visitantes en clientes",
+    template: "%s | Landing estratégica",
   },
   description:
-    "Mentoría y acompañamiento estratégico para escalar tu negocio high-ticket con oferta premium, proceso comercial sólido y crecimiento con claridad.",
+    "Diseño landing pages para coaches, consultores, clínicas y negocios de servicios. Más leads, llamadas y ventas sin funnels complejos.",
   robots: { index: true, follow: true },
+  icons: {
+    icon: [{ url: "/isotipo.webp", type: "image/webp" }],
+    apple: "/isotipo.webp",
+  },
   openGraph: {
     type: "website",
     locale: "es_ES",
-    siteName: "Coach B2B High-Ticket",
-    title: "Escala tu negocio high-ticket con claridad",
+    siteName: "Landing estratégica",
+    title:
+      "Convierte más visitantes en clientes con una landing pensada para vender",
     description:
-      "Oferta premium, proceso comercial y estrategia de crecimiento para coaches, agencias y expertos B2B.",
+      "Landing pages estratégicas con WhatsApp, formularios, agenda y diseño premium enfocado en conversión.",
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0f172a",
+  themeColor: "#0B1120",
   width: "device-width",
   initialScale: 1,
 };
@@ -42,52 +50,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={plusJakarta.variable}>
-      <body className="min-h-dvh font-sans text-slate-900 antialiased">
+    <html lang="es" className={inter.variable}>
+      <body className="min-h-dvh font-sans antialiased">
+      <MetaPixel />
         <SkipLink />
-        {/* Google Analytics 4 — reemplaza G-XXXXXXXXXX por tu ID de medición */}
-        <Script
-          id="ga4-loader"
-          strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
-        />
-        <Script id="ga4-config" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
-          `}
-        </Script>
-
-        {/* Meta (Facebook) Pixel — reemplaza YOUR_PIXEL_ID */}
-        <Script id="meta-pixel" strategy="afterInteractive">
-          {`
-            !function(f,b,e,v,n,t,s)
-            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', 'YOUR_PIXEL_ID');
-            fbq('track', 'PageView');
-          `}
-        </Script>
-        <noscript>
-          {/* Pixel de Meta: el snippet oficial usa img 1×1 dentro de noscript */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            height="1"
-            width="1"
-            style={{ display: "none" }}
-            src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
-            alt=""
-          />
-        </noscript>
-
         {children}
+        <CookieBanner />
+        <TrackingScripts />
       </body>
     </html>
   );

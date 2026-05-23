@@ -1,2 +1,2 @@
-export const CTA_HREF = "#cta-final";
-export const CTA_LABEL = "Agendar llamada estratégica";
+export const CTA_HREF = "#contacto";
+export const CTA_LABEL = "Solicitar mi landing";
