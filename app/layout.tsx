@@ -14,7 +14,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://example.com"),
+  metadataBase: new URL("https://martingomher.online"),
   title: {
     default:
       "Landing pages estratégicas · Convierte visitantes en clientes",
