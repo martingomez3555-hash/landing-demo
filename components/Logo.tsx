@@ -7,8 +7,8 @@ type LogoProps = {
 };
 
 export function Logo({ variant = "full", className = "" }: LogoProps) {
-  const height = variant === "footer" ? 56 : 120;
-  const width = variant === "footer" ? 220 : 420;
+  const height = variant === "footer" ? 56 : 72;
+  const width = variant === "footer" ? 220 : 240;
 
   return (
     <Link
@@ -24,7 +24,7 @@ export function Logo({ variant = "full", className = "" }: LogoProps) {
         className={
           variant === "footer"
             ? "h-auto w-auto max-h-14 object-contain object-left sm:max-h-16"
-            : "h-auto w-auto max-h-24 object-contain object-left sm:max-h-28 md:max-h-32"
+            : "h-auto w-auto max-h-14 object-contain object-left sm:max-h-16"
         }
         priority={variant === "full"}
       />

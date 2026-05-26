@@ -12,10 +12,15 @@ import { Solution } from "@/components/Solution";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { WhoCanUse } from "@/components/WhoCanUse";
 import BotFlotante from "@/components/BotFlotante";
+
+import dynamic from "next/dynamic";
+
+
 export default function HomePage() {
   return (
     <>
       <Navbar />
+
       <main
         id="contenido-principal"
         tabIndex={-1}
@@ -31,10 +36,15 @@ export default function HomePage() {
         <Portfolio />
         <FAQ />
         <FinalCTA />
+
+        {/* Tally optimizado */}
+      
+
         <Footer />
       </main>
+
       <StickyMobileCTA />
       <BotFlotante />
-      </>
+    </>
   );
 }
