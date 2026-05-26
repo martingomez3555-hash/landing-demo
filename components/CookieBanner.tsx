@@ -44,7 +44,7 @@ export function CookieBanner() {
           href="/cookies"
           className="text-accent-sky underline-offset-2 hover:underline"
         >
-          Más información
+          Política de cookies
         </Link>
       </p>
       <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:gap-3">
