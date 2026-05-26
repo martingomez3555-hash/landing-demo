@@ -13,8 +13,6 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { WhoCanUse } from "@/components/WhoCanUse";
 import BotFlotante from "@/components/BotFlotante";
 
-import dynamic from "next/dynamic";
-
 
 export default function HomePage() {
   return (
